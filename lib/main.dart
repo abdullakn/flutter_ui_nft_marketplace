@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NFT Profile',
       
-      home: const ProfilePage(),
+      home:  ProfilePage(),
     );
   }
 }
