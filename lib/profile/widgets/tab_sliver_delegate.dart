@@ -18,6 +18,7 @@ class TabSliverDelegate extends SliverPersistentHeaderDelegate {
           color: Colors.white,
           border: Border(bottom: BorderSide(color: Colors.grey, width: 1))),
       padding: EdgeInsets.only(left: 15, right: space ? 120 : 0),
+      margin: EdgeInsets.only(top:10),
       child: tabBar,
     );
   }

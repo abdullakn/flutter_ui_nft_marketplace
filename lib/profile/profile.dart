@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/models/profile.dart';
+import 'package:nft_marketplace/profile/widgets/custom_grid.dart';
 import 'package:nft_marketplace/profile/widgets/person_info.dart';
 import 'package:nft_marketplace/profile/widgets/tab_sliver_delegate.dart';
 
@@ -38,7 +39,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ];
             },
-            body: TabBarView(children: [Text('create'), Text('Colection')]),
+            body: TabBarView(children: [CustomGrid(scrollKey: 'creations', list: profile.creation),CustomGrid(scrollKey: 'collections', list: profile.collection)]),
           ),
         ));
   }

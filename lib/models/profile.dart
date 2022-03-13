@@ -36,16 +36,56 @@ class Profile {
               imageurl: "assets/images/nft2.jpeg",
               name: "NFT2",
               price: 40,
+              desc: "beautiful handmade nft"),
+                Art(
+              imageurl: "assets/images/nft3.jpeg",
+              name: "NFT1",
+              price: 35,
+              desc: "beautiful handmade nft"),
+          Art(
+              imageurl: "assets/images/nft4.jpeg",
+              name: "NFT2",
+              price: 40,
+              desc: "beautiful handmade nft"),
+                Art(
+              imageurl: "assets/images/nft5.jpeg",
+              name: "NFT1",
+              price: 35,
+              desc: "beautiful handmade nft"),
+          Art(
+              imageurl: "assets/images/nft6.jpeg",
+              name: "NFT2",
+              price: 40,
               desc: "beautiful handmade nft")
         ],
         collection: [
-          Art(
+           Art(
               imageurl: "assets/images/nft1.jpeg",
               name: "NFT1",
               price: 35,
               desc: "beautiful handmade nft"),
           Art(
               imageurl: "assets/images/nft2.jpeg",
+              name: "NFT2",
+              price: 40,
+              desc: "beautiful handmade nft"),
+                Art(
+              imageurl: "assets/images/nft3.jpeg",
+              name: "NFT1",
+              price: 35,
+              desc: "beautiful handmade nft"),
+          Art(
+              imageurl: "assets/images/nft4.jpeg",
+              name: "NFT2",
+              price: 40,
+              desc: "beautiful handmade nft"),
+                Art(
+              imageurl: "assets/images/nft5.jpeg",
+              name: "NFT1",
+              price: 35,
+              desc: "beautiful handmade nft"),
+          Art(
+              imageurl: "assets/images/nft6.jpeg",
               name: "NFT2",
               price: 40,
               desc: "beautiful handmade nft")
