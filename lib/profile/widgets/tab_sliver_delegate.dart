@@ -8,23 +8,16 @@ class TabSliverDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-        print("here");
-        print(tabBar.preferredSize.height);
+    print("here");
+    print(tabBar.preferredSize.height);
+   
     // TODO: implement build
     return Container(
-      
       height: 50,
       decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border(bottom: BorderSide(
-          color: Colors.grey,
-          width: 1
-        ))
-      ),
-      padding: EdgeInsets.only(
-        left: 50,
-        right: space?120:0
-      ),
+          color: Colors.white,
+          border: Border(bottom: BorderSide(color: Colors.grey, width: 1))),
+      padding: EdgeInsets.only(left: 15, right: space ? 120 : 0),
       child: tabBar,
     );
   }

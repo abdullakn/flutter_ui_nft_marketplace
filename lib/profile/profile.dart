@@ -13,17 +13,17 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
         appBar: _buildAppbar(),
         body: DefaultTabController(
-            length: 2,
-            child: NestedScrollView(
-              headerSliverBuilder:
-                  (BuildContext context, bool innerBoxIsScrolled) {
-                return <Widget>[
-                  SliverToBoxAdapter(
-                    child: PersonelInfo(profile: profile),
-                  ),
-                  SliverPersistentHeader(
-                      delegate: TabSliverDelegate(
-                          tabBar: TabBar(
+          length: 2,
+          child: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                SliverToBoxAdapter(
+                  child: PersonelInfo(profile: profile),
+                ),
+                SliverPersistentHeader(
+                  delegate: TabSliverDelegate(
+                      tabBar: TabBar(
                     tabs: tabs
                         .map((e) => Text(
                               e,
@@ -33,11 +33,14 @@ class ProfilePage extends StatelessWidget {
                     labelColor: Colors.black,
                     unselectedLabelColor: Colors.grey[400],
                     indicatorColor: Colors.black,
-                  )))
-                ];
-              },
-              body: TabBarView(children: [Text('create'), Text('Colection')]),
-            )));
+                  )),
+                  pinned: true,
+                ),
+              ];
+            },
+            body: TabBarView(children: [Text('create'), Text('Colection')]),
+          ),
+        ));
   }
 
   AppBar _buildAppbar() {
