@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constant/colors.dart';
 import 'package:nft_marketplace/details/widgets/art_info.dart';
+import 'package:nft_marketplace/details/widgets/bidder.list.dart';
+import 'package:nft_marketplace/details/widgets/buy_now.dart';
 import 'package:nft_marketplace/details/widgets/detail_banner.dart';
 import 'package:nft_marketplace/models/art.dart';
 import 'package:nft_marketplace/profile/widgets/tab_sliver_delegate.dart';
@@ -15,6 +17,7 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: DefaultTabController(
+        initialIndex: 1,
           length: 3,
           child: NestedScrollView(
               headerSliverBuilder:
@@ -39,7 +42,6 @@ class DetailsPage extends StatelessWidget {
                   SliverPersistentHeader(
                     delegate: TabSliverDelegate(
                         tabBar: TabBar(
-                          
                       tabs: tabs
                           .map((e) => Text(
                                 e,
@@ -50,13 +52,21 @@ class DetailsPage extends StatelessWidget {
                       unselectedLabelColor: Colors.grey[400],
                       indicatorColor: Colors.black,
                       isScrollable: true,
-                      labelPadding: EdgeInsets.only(left: 5,right: 40),
+                      labelPadding: EdgeInsets.only(left: 5, right: 40),
                     )),
                     pinned: true,
                   )
                 ];
               },
-              body: Container())),
+              body: TabBarView(children: [
+                ListView(
+                  children: [],
+                ),
+                BidderList(scrollKey: 'birds', bidderList: art.birds),
+                BidderList(scrollKey: 'birds', bidderList: art.history)
+              ]))),
+              floatingActionButton:const BuyButton(),
+              floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
